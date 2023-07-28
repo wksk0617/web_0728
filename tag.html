@@ -37,22 +37,40 @@
         height: 0;
         overflow: hidden;
         transition: 0.5s;
+        z-index: 100;
+    }
+    #gnb ul a {
+        color: white;
+    }
+    #gnb:after{
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0; 
+        right: 0;
+        top: 100%;
+        background-color: black;
+        height: 0;
+        transition: 0.5s;
     }
     #gnb:hover ul{
-        border-color: #222;
+        /* border-color: #222; */
         height: 7rem;
-        background-color: white;
+        /* background-color: white; */
+    }
+    #gnb:hover:after{
+        height: 7rem;
     }
     #gnb > li:hover > a{
         color: red;
     }
     #hd{
         background-color: #ccc;
-        padding: 15px 0;
+        padding: 15px 0 0;
     }
 </style>
 <body>
-    <header class="container d-flex jcb" id="hd">
+    <header class="container d-flex jcb rel" id="hd">
         <h1><a href="#none" class="d-block">로고</a></h1>
         <ul id="gnb" class="d-flex">
             <li class="rel">
